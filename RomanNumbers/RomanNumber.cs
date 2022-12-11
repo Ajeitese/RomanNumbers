@@ -9,6 +9,11 @@ namespace RomanNumbers
             StringBuilder result = new StringBuilder(); 
             if (number > 0)
             {
+                if (number >= 10)
+                {
+                    result.Append("X");
+                    number -= 10;
+                }
                 if (number >= 5)
                 {
                     result.Append("V");
