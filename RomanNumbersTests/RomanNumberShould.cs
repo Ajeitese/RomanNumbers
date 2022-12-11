@@ -14,13 +14,13 @@ namespace RomanNumbersTests
             romanNumber = new RomanNumber();
         }
         
-        [Test]
-        public void Convert_To_Roman_Number()
+        [TestCase (0, ExpectedResult = "")]
+        [TestCase (1, ExpectedResult = "I")]
+        [TestCase (2, ExpectedResult = "II")]
+        [TestCase (3, ExpectedResult = "III")]
+        public string Convert_To_Roman_Number(int number)
         {
-            Assert.That(romanNumber.ConvertToRoman(0), Is.EqualTo(string.Empty));
-            Assert.That(romanNumber.ConvertToRoman(1), Is.EqualTo("I"));
-            Assert.That(romanNumber.ConvertToRoman(2), Is.EqualTo("II"));
-            Assert.That(romanNumber.ConvertToRoman(3), Is.EqualTo("III"));
+            return romanNumber.ConvertToRoman(number);
         }
     }
 }
