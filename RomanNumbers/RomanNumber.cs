@@ -9,20 +9,20 @@ namespace RomanNumbers
             StringBuilder result = new StringBuilder(); 
             while (number > 0)
             {
-                if (number >= 10)
+                if (number >= (int)RomanSymbol.X)
                 {
-                    result.Append("X");
-                    number -= 10;
+                    result.Append(RomanSymbol.X);
+                    number -= (int)RomanSymbol.X;
                 }
-                else if (number >= 5)
+                else if (number >= (int)RomanSymbol.V)
                 {
-                    result.Append("V");
-                    number -= 5;
+                    result.Append(RomanSymbol.V);
+                    number -= (int)RomanSymbol.V;
                 }
                 else
                 {
-                    result.Append("I");
-                    number -= 1;
+                    result.Append(RomanSymbol.I);
+                    number -= (int)RomanSymbol.I;
                 }
             }
             return result.ToString();
