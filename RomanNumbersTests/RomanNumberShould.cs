@@ -20,7 +20,7 @@ namespace RomanNumbersTests
             Assert.That(romanNumber.ConvertToRoman(0), Is.EqualTo(string.Empty));
             Assert.That(romanNumber.ConvertToRoman(1), Is.EqualTo("I"));
             Assert.That(romanNumber.ConvertToRoman(2), Is.EqualTo("II"));
-
+            Assert.That(romanNumber.ConvertToRoman(3), Is.EqualTo("III"));
         }
     }
 }

@@ -6,6 +6,8 @@ namespace RomanNumbers
         {
             if (number > 0)
             {
+                if (number == 3)
+                    return "III";
                 if (number == 2)
                     return "II";                    
                 return "I";
