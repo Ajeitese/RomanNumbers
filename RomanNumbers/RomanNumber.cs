@@ -1,19 +1,18 @@
+using System.Text;
+
 namespace RomanNumbers
 {
     public class RomanNumber
     {
         public string ConvertToRoman(int number)
         {
+            StringBuilder result = new StringBuilder(); 
             if (number > 0)
             {
-                if (number == 3)
-                    return "III";
-                if (number == 2)
-                    return "II";                    
-                return "I";
+                for (int i = 0; i < number; i++)
+                    result.Append("I");
             }
-
-            return string.Empty;
+            return result.ToString();
         }
     }
 }
