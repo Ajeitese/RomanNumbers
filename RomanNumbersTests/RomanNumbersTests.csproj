@@ -45,6 +45,12 @@
         <Compile Include="RomanNumberShould.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\RomanNumbers\RomanNumbers.csproj">
+        <Project>{0f44dd69-1aaf-4dd8-b780-0d47ad9d0c8f}</Project>
+        <Name>RomanNumbers</Name>
+      </ProjectReference>
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.

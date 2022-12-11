@@ -1,6 +1,5 @@
-﻿using System;
-using NUnit.Framework;
-using NUnit.Framework.Constraints;
+﻿using NUnit.Framework;
+using RomanNumbers;
 
 namespace RomanNumbersTests
 {
@@ -19,15 +18,6 @@ namespace RomanNumbersTests
         public void Convert_To_Roman_Number()
         {
             Assert.That(romanNumber.ConvertToRoman(0), Is.EqualTo(string.Empty));
-        }
-
-    }
-
-    public class RomanNumber
-    {
-        public string ConvertToRoman(int number)
-        {
-            return string.Empty;
         }
     }
 }
