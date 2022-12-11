@@ -31,8 +31,8 @@ namespace RomanNumbersTests
         [TestCase (20, ExpectedResult = "XX")]
         [TestCase (25, ExpectedResult = "XXV")]
         [TestCase (30, ExpectedResult = "XXX")]
+        [TestCase (40, ExpectedResult = "XL")]
         [TestCase (50, ExpectedResult = "L")]
-
         public string Convert_To_Roman_Number(int number)
         {
             return romanNumber.ConvertToRoman(number);
