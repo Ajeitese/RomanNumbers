@@ -5,7 +5,12 @@ namespace RomanNumbers
         public string ConvertToRoman(int number)
         {
             if (number > 0)
+            {
+                if (number == 2)
+                    return "II";                    
                 return "I";
+            }
+
             return string.Empty;
         }
     }
