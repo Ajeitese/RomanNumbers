@@ -7,21 +7,23 @@ namespace RomanNumbers
         public string ConvertToRoman(int number)
         {
             StringBuilder result = new StringBuilder(); 
-            if (number > 0)
+            while (number > 0)
             {
                 if (number >= 10)
                 {
                     result.Append("X");
                     number -= 10;
                 }
-                if (number >= 5)
+                else if (number >= 5)
                 {
                     result.Append("V");
                     number -= 5;
                 }
-
-                for (int i = 0; i < number; i++)
+                else
+                {
                     result.Append("I");
+                    number -= 1;
+                }
             }
             return result.ToString();
         }

@@ -22,6 +22,10 @@ namespace RomanNumbersTests
         [TestCase (7, ExpectedResult = "VII")]
         [TestCase (8, ExpectedResult = "VIII")]
         [TestCase (10, ExpectedResult = "X")]
+        [TestCase (13, ExpectedResult = "XIII")]
+        [TestCase (15, ExpectedResult = "XV")]
+        [TestCase (17, ExpectedResult = "XVII")]
+        [TestCase (20, ExpectedResult = "XX")]
         public string Convert_To_Roman_Number(int number)
         {
             return romanNumber.ConvertToRoman(number);
