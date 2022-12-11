@@ -1,3 +1,4 @@
+using System;
 using System.Text;
 
 namespace RomanNumbers
@@ -6,23 +7,15 @@ namespace RomanNumbers
     {
         public string ConvertToRoman(int number)
         {
-            StringBuilder result = new StringBuilder(); 
-            while (number > 0)
+            StringBuilder result = new StringBuilder();
+            var enumValues = Enum.GetValues(typeof(RomanSymbol));
+            Array.Reverse(enumValues);
+            foreach (RomanSymbol romanSymbol in enumValues)
             {
-                if (number >= (int)RomanSymbol.X)
+                while (number >= (int)romanSymbol)
                 {
-                    result.Append(RomanSymbol.X);
-                    number -= (int)RomanSymbol.X;
-                }
-                else if (number >= (int)RomanSymbol.V)
-                {
-                    result.Append(RomanSymbol.V);
-                    number -= (int)RomanSymbol.V;
-                }
-                else
-                {
-                    result.Append(RomanSymbol.I);
-                    number -= (int)RomanSymbol.I;
+                    result.Append(romanSymbol);
+                    number -= (int)romanSymbol;
                 }
             }
             return result.ToString();
