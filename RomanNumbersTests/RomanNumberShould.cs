@@ -18,6 +18,7 @@ namespace RomanNumbersTests
         public void Convert_To_Roman_Number()
         {
             Assert.That(romanNumber.ConvertToRoman(0), Is.EqualTo(string.Empty));
+            Assert.That(romanNumber.ConvertToRoman(1), Is.EqualTo("I"));
         }
     }
 }

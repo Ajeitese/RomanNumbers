@@ -4,6 +4,8 @@ namespace RomanNumbers
     {
         public string ConvertToRoman(int number)
         {
+            if (number > 0)
+                return "I";
             return string.Empty;
         }
     }
