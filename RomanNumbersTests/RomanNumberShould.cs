@@ -20,6 +20,7 @@ namespace RomanNumbersTests
         public void Convert_A_Decimal_Number_To_Roman_Number()
         {
             Assert.That(RomanNumber.ConvertFromDecimal(1), Is.EqualTo("I"));
+            Assert.That(RomanNumber.ConvertFromDecimal(2), Is.EqualTo("II"));
         }
         
     }
