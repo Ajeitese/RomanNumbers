@@ -19,6 +19,7 @@ namespace RomanNumbersTests
         [TestCase(1, ExpectedResult = "I")]
         [TestCase(2, ExpectedResult = "II")]
         [TestCase(3, ExpectedResult = "III")]
+        [TestCase(4, ExpectedResult = "IV")]
         [TestCase(5, ExpectedResult = "V")]
         [TestCase(7, ExpectedResult = "VII")]
         [TestCase(10, ExpectedResult = "X")]
