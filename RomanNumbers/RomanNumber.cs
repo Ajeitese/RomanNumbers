@@ -5,7 +5,10 @@
     {
         public static string ConvertFromDecimal(int number)
         {
-            return string.Empty;
+            if(number <= 0)
+                return string.Empty;
+
+            return "I";
         }
     }
 }

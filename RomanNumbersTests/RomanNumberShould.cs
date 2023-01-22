@@ -15,5 +15,12 @@ namespace RomanNumbersTests
         {
             Assert.That(RomanNumber.ConvertFromDecimal(0), Is.EqualTo(string.Empty));
         }
+        
+        [Test]
+        public void Convert_A_Decimal_Number_To_Roman_Number()
+        {
+            Assert.That(RomanNumber.ConvertFromDecimal(1), Is.EqualTo("I"));
+        }
+        
     }
 }
