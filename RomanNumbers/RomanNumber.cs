@@ -1,22 +1,24 @@
-﻿namespace RomanNumbers
+﻿using System.Text;
+
+namespace RomanNumbers
 {
 
     public static class RomanNumber
     {
         public static string ConvertFromDecimal(int number)
         {
-            string result = string.Empty;
+            StringBuilder result = new StringBuilder();
             var symbolArray = Enum.GetValues(typeof(RomanSymbols));
             Array.Reverse(symbolArray);
             foreach (RomanSymbols romanSymbols in symbolArray)
             {
                 while (number >= (int)romanSymbols)
                 {
-                    result += romanSymbols;
+                    result.Append(romanSymbols);
                     number -= (int)romanSymbols;
                 }
             }
-            return result;
+            return result.ToString();
         }
     }
 }
