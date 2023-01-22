@@ -5,16 +5,13 @@
     {
         public static string ConvertFromDecimal(int number)
         {
-            if(number <= 0)
-                return string.Empty;
-
-            if(number == 1)
-                return "I";
-
-            if(number == 2)
-                return "II";
-            
-            return "III";
+            string result = string.Empty;
+            while (number > 0)
+            {
+                result += "I";
+                number -= 1;
+            }
+            return result;
         }
     }
 }
