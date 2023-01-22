@@ -8,7 +8,12 @@
             string result = string.Empty;
             while (number > 0)
             {
-                if (number >= 5)
+                if (number >= 10)
+                {
+                    result += "X";
+                    number -= 10;
+                }
+                else if (number >= 5)
                 {
                     result += "V";
                     number -= 5;
