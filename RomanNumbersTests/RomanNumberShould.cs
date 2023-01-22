@@ -25,6 +25,9 @@ namespace RomanNumbersTests
         [TestCase(12, ExpectedResult = "XII")]
         [TestCase(15, ExpectedResult = "XV")]
         [TestCase(16, ExpectedResult = "XVI")]
+        [TestCase(30, ExpectedResult = "XXX")]
+        [TestCase(50, ExpectedResult = "L")]
+
         public string Convert_A_Decimal_Number_To_Roman_Number(int number)
         {
             return RomanNumber.ConvertFromDecimal(number);
