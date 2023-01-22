@@ -16,14 +16,12 @@ namespace RomanNumbersTests
             Assert.That(RomanNumber.ConvertFromDecimal(0), Is.EqualTo(string.Empty));
         }
         
-        [Test]
-        public void Convert_A_Decimal_Number_To_Roman_Number()
+        [TestCase(1, ExpectedResult = "I")]
+        [TestCase(2, ExpectedResult = "II")]
+        [TestCase(3, ExpectedResult = "III")]
+        public string Convert_A_Decimal_Number_To_Roman_Number(int number)
         {
-            Assert.That(RomanNumber.ConvertFromDecimal(1), Is.EqualTo("I"));
-            Assert.That(RomanNumber.ConvertFromDecimal(2), Is.EqualTo("II"));
-            Assert.That(RomanNumber.ConvertFromDecimal(3), Is.EqualTo("III"));
-
+            return RomanNumber.ConvertFromDecimal(number);
         }
-        
     }
 }
