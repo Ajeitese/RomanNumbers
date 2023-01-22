@@ -8,8 +8,16 @@
             string result = string.Empty;
             while (number > 0)
             {
-                result += "I";
-                number -= 1;
+                if (number >= 5)
+                {
+                    result += "V";
+                    number -= 5;
+                }
+                else
+                {
+                    result += "I";
+                    number -= 1;
+                }
             }
             return result;
         }
