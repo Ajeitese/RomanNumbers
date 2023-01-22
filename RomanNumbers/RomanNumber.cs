@@ -6,22 +6,14 @@
         public static string ConvertFromDecimal(int number)
         {
             string result = string.Empty;
-            while (number > 0)
+            var symbolArray = Enum.GetValues(typeof(RomanSymbols));
+            Array.Reverse(symbolArray);
+            foreach (RomanSymbols romanSymbols in symbolArray)
             {
-                if (number >= (int)RomanSymbols.X)
+                while (number >= (int)romanSymbols)
                 {
-                    result += RomanSymbols.X;
-                    number -= (int)RomanSymbols.X;
-                }
-                else if (number >= (int)RomanSymbols.V)
-                {
-                    result += RomanSymbols.V;
-                    number -= (int)RomanSymbols.V;
-                }
-                else
-                {
-                    result += RomanSymbols.I;
-                    number -= (int)RomanSymbols.I;
+                    result += romanSymbols;
+                    number -= (int)romanSymbols;
                 }
             }
             return result;
