@@ -8,20 +8,20 @@
             string result = string.Empty;
             while (number > 0)
             {
-                if (number >= 10)
+                if (number >= (int)RomanSymbols.X)
                 {
-                    result += "X";
-                    number -= 10;
+                    result += RomanSymbols.X;
+                    number -= (int)RomanSymbols.X;
                 }
-                else if (number >= 5)
+                else if (number >= (int)RomanSymbols.V)
                 {
-                    result += "V";
-                    number -= 5;
+                    result += RomanSymbols.V;
+                    number -= (int)RomanSymbols.V;
                 }
                 else
                 {
-                    result += "I";
-                    number -= 1;
+                    result += RomanSymbols.I;
+                    number -= (int)RomanSymbols.I;
                 }
             }
             return result;
