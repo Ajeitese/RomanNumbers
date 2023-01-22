@@ -13,7 +13,7 @@ namespace RomanNumbersTests
         [Test]
         public void Convert_Zero_To_Empty_String()
         {
-            Assert.That(RomanNumber.ConvertFromDecimal(0), Is.EqualTo(""));
+            Assert.That(RomanNumber.ConvertFromDecimal(0), Is.EqualTo(string.Empty));
         }
     }
 }

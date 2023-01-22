@@ -5,7 +5,7 @@
     {
         public static string ConvertFromDecimal(int number)
         {
-            return "";
+            return string.Empty;
         }
     }
 }
