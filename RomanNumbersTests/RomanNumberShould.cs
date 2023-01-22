@@ -21,6 +21,8 @@ namespace RomanNumbersTests
         {
             Assert.That(RomanNumber.ConvertFromDecimal(1), Is.EqualTo("I"));
             Assert.That(RomanNumber.ConvertFromDecimal(2), Is.EqualTo("II"));
+            Assert.That(RomanNumber.ConvertFromDecimal(3), Is.EqualTo("III"));
+
         }
         
     }
